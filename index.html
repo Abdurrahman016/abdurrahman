@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My Portfolio</title>
+
+    <!-- Font Awesome Cdn -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-a"></i>
+                    <div class="logo-text">Abd Ur Rahman</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlink">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Porfolio</a></li>
+                        <li><a href="#">Resume</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                <div class="hero-pic">
+                    <img src="images/IMG-20240501-WA0021 (1) (1).jpg" alt="porfile pic">
+                </div>
+                <div class="hero-text">
+                    <h5>Hi I'm <span id="element">Developer</span></h5>
+                    <h1>Abd Ur Rahman</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio eius harum iure, minima, eum animi reiciendis adipisci quaerat repudiandae eligendi numquam dolorum autem corrupti molestiae repellendus est natus ullam maiores at! Ab dolorum mollitia aliquam.
+                    </p>
+                    <div class="btngroup">
+                        <a href="#" class="btn active">Download CV</a>
+                        <a href="#" class="btn">Contact</a>
+                    </div>
+                    <div class="social">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/abdulrehmanarain00/ "><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Type js Cdn -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Web Designer', 'Database Designer', 'Video Editor.'],
+            typeSpeed: 77,
+            backspeed: 55,
+            loop:true
+        });
+    </script>
+
+    <script>
+        // Creating button click to show and hide navbar
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".navlink");
+        var links = document.querySelector(".navlink li");
+
+        togglebtn.addEventListener("click", function() {
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        });
+    </script>
+</body>
+</html>
